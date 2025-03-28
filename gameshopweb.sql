@@ -204,7 +204,7 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`id`,`NAME`,`PASSWORD`,`email`,`photo`,`sex`,`birthdate`,`phone`,`regtime`,`logtime`,`signature`,`balance`,`STATUS`,`salt`) values (1,'烤肉饭','9b64c5f00039ea6a14db871ba330cd4d','857932817@qq.com','img\\userTx\\9b9762b5-5268-45b8-abf8-db427fc3e370.jpg',1,'2005-07-09',15195544353,'2025-02-16 20:24:00','2025-03-26 18:17:03','你所热爱的就是你的生活',0,0,'61f7400676fe3696f7e082efedacdf03'),(2,'殇痕之墨','24c83356f89923d30b9aa5f4c917ec7e','114514@qq.com','img\\\\userTx\\\\default.jpeg',2,'2000-01-01',17546894175,'2025-02-22 07:31:29','2000-01-01 00:00:00','无',0,0,'a65ddcbca74cd0dbeae5cb561634a055'),(3,'XIXI','2eedfaec87b6668896341e46f0bd9c4e','1919810@163.com','img\\\\userTx\\\\default.jpeg',2,'2000-01-01',15195544353,'2025-02-22 10:56:53','2000-01-01 00:00:00','无',0,0,'0bdfd88e7c65a5a70c96d836b8c02e96');
+insert  into `user`(`id`,`NAME`,`PASSWORD`,`email`,`photo`,`sex`,`birthdate`,`phone`,`regtime`,`logtime`,`signature`,`balance`,`STATUS`,`salt`) values (1,'烤肉饭','9b64c5f00039ea6a14db871ba330cd4d','857932817@qq.com','static/upload/3cf0c247d58649ca97948d5552c1270f.png',1,'2005-07-09',15195544353,'2025-02-16 20:24:00','2025-03-28 08:36:19','你所热爱的就是你的生活',0,0,'61f7400676fe3696f7e082efedacdf03'),(2,'殇痕之墨','24c83356f89923d30b9aa5f4c917ec7e','114514@qq.com','img\\\\userTx\\\\default.jpeg',2,'2000-01-01',17546894175,'2025-02-22 07:31:29','2000-01-01 00:00:00','无',0,0,'a65ddcbca74cd0dbeae5cb561634a055'),(3,'XIXI','2eedfaec87b6668896341e46f0bd9c4e','1919810@163.com','img\\\\userTx\\\\default.jpeg',2,'2000-01-01',15195544353,'2025-02-22 10:56:53','2000-01-01 00:00:00','无',0,0,'0bdfd88e7c65a5a70c96d836b8c02e96');
 
 /*Table structure for table `userwarehouse` */
 
@@ -216,11 +216,11 @@ CREATE TABLE `userwarehouse` (
   `gameproduct_id` int(11) NOT NULL COMMENT '游戏商品id',
   `addtime` date NOT NULL COMMENT '入库时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='用户游戏库';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='用户游戏库';
 
 /*Data for the table `userwarehouse` */
 
-insert  into `userwarehouse`(`id`,`user_id`,`gameproduct_id`,`addtime`) values (1,1,1,'2025-01-01'),(2,1,2,'2025-01-03'),(3,1,3,'2025-01-04'),(4,1,4,'2025-01-11');
+insert  into `userwarehouse`(`id`,`user_id`,`gameproduct_id`,`addtime`) values (1,1,1,'2025-01-01'),(2,1,2,'2025-01-03'),(3,1,3,'2025-01-04'),(4,1,4,'2025-01-11'),(5,1,5,'2025-01-12');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
