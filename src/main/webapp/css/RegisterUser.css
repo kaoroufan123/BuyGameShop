@@ -1,0 +1,93 @@
+
+/* 主体css */
+#app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#appbody {
+	flex: 1;
+	background-color: rgb(33,36,41);
+	background-size: cover;
+	background-position: center;
+}
+
+#mdAll{
+	width: 500px;
+	/* height: 500px; */
+	/* border: 1px solid white; */
+	display: flex;
+	margin-left: 300px
+	/* transform: translateY(50px) */;
+}
+
+#reg-user-text{
+	display: flex;
+	margin-top: 50px;
+	font-size: 30px;
+	color: white;
+	font-weight: lighter;
+}
+
+#reg-user-body{
+	display: flex;
+	justify-content:center;
+	margin-top: 20px;
+	/* transform: translateY(50px); */
+
+}
+
+#name,
+#email,
+#password,
+#checkPassword,
+#phone{
+	width: 300px;
+}
+
+#reg-name-text,
+#reg-email-text,
+#reg-password-text,
+#reg-checkPassword-text,
+#reg-phone-text,
+#reg-checkBox-text{
+	font-size: 15px;
+	color: rgb(184,182,180);
+}
+
+#reg-checkBox-text{
+	font-weight: lighter;
+}
+
+#checkBox-div{
+	display: flex;
+	margin-top:390px;
+	transform: translatex(-200px);
+	/* transform: translateY(300px); */
+}
+
+#checkbox{
+	width: 20px;
+	height: 20px;
+}
+
+.layui-input{
+	background-color: rgb(50,53,60);
+	border-color: rgb(50,53,60);
+	color: white;
+}
+
+.layui-input:hover{
+	border-color: white;
+}
+
+#button-div{
+	display: flex;
+	margin-top: 440px;
+	transform: translateX(-343px);
+}
+
+#layui-btn{
+	width: 100px	;
+}

@@ -1,0 +1,156 @@
+/* 头部导航css */
+#appbody {
+    margin: 0;
+    padding: 0;
+}
+
+#downloadloginindx-button {
+    background-color: rgb(92, 126, 16);
+    width: 100px;
+    height: 22px;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+
+#downloadapp-text {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#header-background {
+    background-color: rgb(23, 29, 37);
+}
+
+#downloadloginindx-button,
+#loginindex {
+    transform: translateY(5px);
+    /* position: relative;
+                top: 5px;
+                text-decoration: none; */
+}
+
+#loginlink,
+#indexlink,
+#logout,
+#b1,
+#b2{
+    color: rgb(184, 182, 180);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#loginlink:hover,
+#indexlink:hover,
+#logout:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.user-img{
+    width: 30px;
+}
+
+.user-name,
+.user-balance,
+#user-logout{
+    color: white;
+    font-size: 10px;
+
+}
+
+.user-container {
+    margin-left: 10px;
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px; /* 头像和文字间距 */
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    line-height: 1.2;
+    gap: 5px;
+    text-align: right;
+}
+
+
+#dl-id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon-link {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(197, 195, 192);
+    font-weight: bold;
+}
+
+#gameshop-icon {
+    transform: translateY(20px);
+
+
+}
+
+#nav {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-shop,
+#nav-ware,
+#nav-support,
+#nav-service {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.layui-nav {
+    background-color: rgb(23, 29, 37);
+}
+
+/* 头部导航css结束 */
+
+/* 主体css */
+#app {
+    height: 100vh;
+    background-color: #1D2024;
+    overflow-y: auto;
+}
+
+#index-body{
+    width: 600px;
+    margin-top: 10%;
+    margin-left: 24%;
+}
+
+.sup{
+    margin: 10px 0;
+}
+
+#icon-text,
+#index-text{
+    color: white;
+}
+
+#icon-text{
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+#index-text{
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+#download-app{
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+}

@@ -1,0 +1,250 @@
+
+
+/* 主体css */
+#app {
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*height: 100vh;*/
+	height: 100%;
+	background-color: rgb(27,40,56);
+	overflow-y: auto;
+/*	border: 1px solid black;*/
+}
+
+#appbody {
+	/*flex: 1;*/
+
+	/*background-size: cover;
+	background-position: center;*/
+
+}
+
+#tag-text{
+	font-size: 16px;
+	font-weight: bold;
+	color: rgb(83,111,130);
+}
+
+#search-text{
+	background-color: rgb(49,98,130);
+	border: 0;
+	width: 300px;
+	color: white;
+}
+
+#search-text:hover{
+	border: 1px solid rgb(76,154,204);
+}
+
+#index-page {
+	display: flex;
+}
+
+/*左侧DIV tag*/
+#left-div{
+	width: 150px;
+	height: 500px;
+	/*border: 1px solid white;*/
+	transform: translateX(130px);
+	margin-top: 80px;
+}
+
+.tagLink{
+	color: rgb(122,139,157);
+	font-size: 12px;
+	margin-top: 2px;
+	display: inline-block;
+}
+
+.tagLink:hover{
+	color: rgb(102,192,244);
+}
+
+/*右侧div 主体*/
+#right-div{
+	width: 1200px;
+ 	/*border: 1px solid blueviolet;*/
+	transform: translateY(10px);
+}
+
+#search-games,#recommend-div{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+#rec-text{
+	transform: translateX(70px);
+}
+
+#carousel-div{
+	margin-top: 20px;
+}
+
+#carousel-div{
+	display: flex;
+	width: 1000px;
+	background-color: rgb(10,20,29);
+}
+
+#carousel{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.caress{
+	flex: 1;
+}
+
+.c-text{
+	color: white;
+}
+
+#game-text{
+	font-size: 25px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#game-publisher{
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#all-games-div{
+	width: 1000px;
+	/*border: 1px solid white;*/
+	margin-top: 10px;
+	transform: translateX(133px);
+
+}
+
+#all-games-text{
+	color: white;
+
+}
+
+/*分页所有游戏商品*/
+#all-games{
+	width: 1000px;
+	height: auto;
+	display: flex;
+	/*background-color: pink;*/
+/*	border: 1px solid black	;*/
+	flex-direction: column;
+	gap: 5px;
+	padding: 5px 0;
+}
+
+.games{
+	width: 1000px;
+	height: 70px;
+	background-color: rgb(32,53,70);
+	display: flex;
+	/* margin: 0 auto; */
+	text-decoration: none;
+}
+
+.games-alink{
+	text-decoration: none;
+	display: flex; /* 改为flex布局 */
+	align-items: center; /* 垂直居中 */
+	width: 100%;
+	padding: 0 10px;
+}
+
+.games-text,
+.games-publisher,
+.games-price,
+.games-issuingDate{
+	color: white;
+	/* margin-left: 10px; */
+}
+
+.games-text,
+.games-publisher,
+.games-tag{
+	transform: translateX(-15px);
+}
+
+
+
+.games:hover .games-text,
+.games:hover .games-publisher,
+	/* .games:hover .games-tag, */
+.games:hover .games-price,
+.games:hover .games-issuingDate,
+.games:hover{
+	background-color: white;
+	color: black;
+}
+
+
+.games-tag{
+	font-size: 10px;
+	color: white;
+}
+
+.games:hover .games-tag{
+	color: black;
+}
+
+.img{
+	height: 70px; /* 适当缩小图片尺寸 */
+	margin-right: 15px;
+	transform: translateX(-10px);
+}
+
+.games-message{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto; /* 推到最右侧 */
+	padding-right: 120px;
+	/* transform: translateX(-30px); */
+	gap: 5px;
+
+	/* border: 1px solid green; */
+}
+
+.games-message-right{
+	width: 30%;
+	/* border: 1px solid pink; */
+}
+
+.games-price,.games-issuingDate{
+	text-align: right;
+}
+
+.games-issuingDate{
+	font-size: 10px;
+	letter-spacing: 0.3em; /* 每个字符间隔0.5个字符宽度 */
+	word-spacing: 0.5em;     /* 单词间隔2个字符宽度 */
+	transform: translateY(15px);
+}
+
+.games-price{
+	transform: translateY(5px);
+}
+
+.page-link,
+.page-link-a{
+	color: white;
+	text-decoration: none;
+}
+
+.page-link-a:hover{
+	text-decoration: none;
+}
+
+#page-change{
+	display: flex;
+	justify-content: center;
+}
+
+.page-link-a{
+	margin: 0 5px; /* 左右间隔15px */
+	display: inline-block; /* 必须设置非行内元素 */
+}

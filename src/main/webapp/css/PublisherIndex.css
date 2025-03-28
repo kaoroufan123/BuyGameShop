@@ -1,0 +1,120 @@
+
+/* 主体css */
+
+/* #app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+} */
+
+#appbody-publisher{
+    display: flex;          /* 启用 flex 布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    min-height: 100vh;      /* 至少撑满整个视口高度 */
+}
+
+#body-header {
+    background-color: black;
+}
+
+#publisher-body {
+    width: 80%;
+    display: flex;
+    gap: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+}
+
+#publisher-text {
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+#publisher-name {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#body-bgcolor {
+    flex: 1;
+    background-color: rgb(32, 36, 41);
+    /* flex: 1;
+    background-size: cover;
+    background-position: center; */
+}
+
+#game-product {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 20px;
+}
+
+#game-product-text {
+    color: white;
+}
+
+
+#game-product-list {
+    margin-top: 10px;
+
+}
+
+.game-product-link {
+    display: flex;
+    /* 启用Flex布局 */
+    text-decoration: none;
+}
+
+.game-product-link:hover {
+    text-decoration: none;
+    background-color: rgb(57, 60, 65);
+}
+
+.game-product-message {
+    margin-left: 10px;
+    display: flex;
+    /* 新增：启用 Flex 布局 */
+    flex-direction: column;
+    /* 垂直排列子元素 */
+    flex: 1;
+
+}
+
+.game-product-img {
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.game-product-name {
+    color: white;
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.game-product-intro {
+    margin-top: 10px;
+    color: rgb(198, 212, 223);
+}
+
+.game-product-price {
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    width: 70px;
+    text-align: center;
+    height: 20px;
+    margin-top: auto;
+    transform: translateY(-10px);
+}
+
+.game-product-div{
+    border-bottom: 1px solid rgb(61,67,72);
+}

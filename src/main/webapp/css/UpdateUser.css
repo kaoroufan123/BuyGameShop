@@ -1,0 +1,184 @@
+
+
+/* 主体css */
+#appbody {
+    height: 620px;
+    background-color: rgb(34, 39, 43);
+    overflow-y: auto;
+}
+
+/* #md-body{
+	border: 1px solid white;
+} */
+
+#user-img {
+    width: 100px;
+}
+
+#user-header-link-div {
+    color: rgb(130, 130, 130);
+}
+
+#user-name,
+#update-message {
+    color: white;
+    text-decoration: none;
+}
+
+#user-name {
+    font-size: 25px;
+}
+
+#user-name:hover,
+#update-message:hover {
+    color: rgb(102, 192, 244);
+}
+
+#user-header {
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(46, 51, 58);
+}
+
+#user-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#back-mssage-div {
+    padding-top: 20px;
+    float: right;
+}
+
+#back-message {
+    color: rgb(153, 153, 153);
+    text-decoration: underline;
+}
+
+#back-message:hover {
+    color: white;
+}
+
+#update-body {
+    margin-top: 40px;
+}
+
+/* #update-body-left{
+	border: 1px solid white;
+}
+ */
+#user-message-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+#user-message,
+#user-photo {
+    color: rgb(153, 153, 153);
+    font-size: 15px;
+}
+
+#user-message-div a {
+    /* 基础样式：移除默认下划线 */
+    text-decoration: none;
+
+}
+
+#user-message{
+    background-color: rgb(61, 68, 80);
+    color: white;
+}
+
+/* 已访问链接 */
+/* #user-message:visited,
+#user-photo:visited {
+	color: rgb(153, 153, 153);
+} */
+
+/* 悬停效果 */
+#user-message:hover,
+#user-photo:hover {
+    background-color: rgb(61, 68, 80);
+    color: white;
+}
+
+/* 点击瞬间效果 */
+#user-message:active,
+#user-photo:active {
+    background-color: rgb(61, 68, 80);
+    color: white;
+}
+
+.user-link {
+
+    /* border: 1px solid white; */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* #update-body-right{
+	border: 1px solid white;
+} */
+
+#padding-body{
+    padding-left: 10px;
+
+}
+
+#message-text-h1{
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+}
+
+#message-text,
+#message-text-p2{
+    color: rgb(172,178,184);
+}
+#uum-p{
+    color: rgb(228,228,228);
+}
+
+#uum-p{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(51,54,56);
+}
+
+#update-user-message-body{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.layui-input{
+    background-color: rgb(26,30,33);
+    border: 1px solid rgb(26,30,33);
+    color: rgb(144,144,144);
+}
+
+.uumb-p{
+    color: rgb(163,169,175);
+}
+
+
+#uumb-btn-div{
+    padding-bottom: 100px;
+    margin-top: 20px;
+    float: right;
+}
+
+#save-btn{
+    width: 200px;
+    height: 40px;
+
+}
+
+#clear-btn{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(61,68,80);
+}

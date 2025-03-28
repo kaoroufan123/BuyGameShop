@@ -1,0 +1,13 @@
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#appbody {
+    flex: 1;
+    background-color: rgb(27,40,56);
+    background-size: cover;
+    background-position: center;
+}

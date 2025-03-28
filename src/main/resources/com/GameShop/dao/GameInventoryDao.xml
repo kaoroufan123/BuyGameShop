@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.GameShop.dao.GameInventoryDao">
+    <resultMap id="UserWareHouse" type="com.GameShop.entity.UserWareHouse">
+        <id property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="gameproduct_id" column="gameproduct_id"/>
+
+        <association property="table_gameProduct" resultMap="table_gameProductList"/>
+    </resultMap>
+
+    <resultMap id="table_gameProductList" type="com.GameShop.entity.GameProduct">
+        <id property="id" column="gameproduct_table_id"/>
+        <result property="name" column="gameproduct_name"/>
+        <result property="gamePhoto" column="gameproduct_photo"/>
+    </resultMap>
+
+
+    <!--<resultMap id="userwarehouseLine2" type="com.GameShop.entity.UserWareHouse">
+        <id property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        &lt;!&ndash; 添加缺失的 gameproduct_id 映射 &ndash;&gt;
+        <result property="gameproduct_id" column="gameproduct_id"/>
+        &lt;!&ndash; 保持关联映射 &ndash;&gt;
+        <association property="table_gameProduct" resultMap="table_gameProductList"/>
+    </resultMap>
+    <resultMap id="table_gameProductListWithImg" type="com.GameShop.entity.GameProduct">
+        <id property="id" column="gameproduct_table_id"/>
+        <result property="name" column="gameproduct_name"/>
+        <association property="table_verticalImgList" resultMap="table_verticalImgList"/>
+    </resultMap>
+    <resultMap id="table_verticalImgList" type="com.GameShop.entity.GameProduct_VerticalImg">
+        <id property="id" column="id"/>
+        <id property="gameProduct_id" column="gameProduct_id"/>
+        <id property="verticalImage" column="verticalImage"/>
+    </resultMap>-->
+
+    <!-- 修改库存映射 -->
+    <resultMap id="userwarehouseLine2" type="com.GameShop.entity.UserWareHouse">
+        <id property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <association property="table_gameProduct" resultMap="table_gameProductListByImage"/>
+    </resultMap>
+    <!-- 修改游戏产品映射包含图片列表 -->
+    <resultMap id="table_gameProductListByImage" type="com.GameShop.entity.GameProduct">
+        <id property="id" column="gameproduct_table_id"/>
+        <collection property="table_verticalImgList" resultMap="table_verticalImgList"/>
+    </resultMap>
+    <!-- 新增垂直图片结果映射 -->
+    <resultMap id="table_verticalImgList" type="com.GameShop.entity.GameProduct_VerticalImg">
+        <id property="id" column="vertical_img_id"/>
+        <result property="gameProduct_id" column="gameproduct_id"/>
+        <result property="verticalImage" column="verticalimage"/>
+    </resultMap>
+
+
+    <select id="findGameInventoryByUserId" resultMap="UserWareHouse">
+        SELECT
+        uwh.id,
+        uwh.user_id,
+        uwh.gameproduct_id,
+        gp.id as gameproduct_table_id,
+        gp.name as gameproduct_name,
+        gp.gamephoto as gameproduct_photo
+        FROM
+        userwarehouse AS uwh
+        LEFT JOIN gameproduct AS gp
+        ON uwh.gameproduct_id = gp.id
+        <where>
+            uwh.user_id = #{id}
+        </where>
+    </select>
+
+    <select id="findGameInventoryImageByUserId" resultMap="userwarehouseLine2">
+        SELECT
+            uwh.id,
+            uwh.user_id,
+            uwh.gameproduct_id,  <!-- 添加必要字段 -->
+            gp.id as gameproduct_table_id,  <!-- 添加游戏产品表字段 -->
+            gpvl.verticalimage
+        FROM userwarehouse AS uwh
+        LEFT JOIN gameproduct AS gp ON uwh.gameproduct_id = gp.id
+        LEFT JOIN gameproduct_verticalimg AS gpvl ON gpvl.gameproduct_id = gp.id
+        <where>
+            uwh.user_id = #{id}
+        </where>
+    </select>
+</mapper>

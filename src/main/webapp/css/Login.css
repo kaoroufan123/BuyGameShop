@@ -1,0 +1,89 @@
+
+/* 主体css */
+#app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+#appbody {
+	flex: 1;
+	background-image:
+		linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent),
+		linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent),
+		linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent),
+		linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent),
+		url("../img/body_background.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+#login-text{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	position: relative;
+	left: 60px;
+	bottom:50px;
+}
+
+#login-page{
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+	margin-top: 150px;
+}
+
+#login-body{
+	width: 650px;
+	background-color: rgb(24,26,33);
+	height: 330px;
+}
+
+#login-name-input,
+#login-password-input,
+#login-select-choose{
+	width: 500px;
+}
+
+#login-btn{
+	width: 300px;
+	font-size: 18px;
+	font-weight: lighter;
+}
+
+#login-name,
+#login-password,
+#login-select,
+#login-button-div,
+#nologinhelper-div{
+	display: flex;
+	justify-content: center;
+}
+
+#login-name-text,
+#login-password-text,
+#login-select-text,
+#loginhelper{
+	color: rgb(197,195,192);
+}
+
+.layui-input{
+	background-color: rgb(50,53,60);
+	border:1px solid rgb(50,53,60);
+	color: white;
+}
+
+.layui-input:hover{
+	border:1px solid white;
+}
+
+#nologinhelper-div{
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+#loginhelper{
+	text-decoration: underline;
+}

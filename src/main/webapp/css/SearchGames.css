@@ -1,0 +1,336 @@
+/* 头部导航css */
+#appbody {
+    margin: 0;
+    padding: 0;
+}
+
+#downloadloginindx-button {
+    background-color: rgb(92, 126, 16);
+    width: 100px;
+    height: 22px;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+
+#downloadapp-text {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#header-background {
+    background-color: rgb(23, 29, 37);
+}
+
+#downloadloginindx-button,
+#loginindex {
+    transform: translateY(5px);
+    /* position: relative;
+                top: 5px;
+                text-decoration: none; */
+}
+
+#loginlink,
+#indexlink,
+#logout,
+#b1,
+#b2{
+    color: rgb(184, 182, 180);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#loginlink:hover,
+#indexlink:hover,
+#logout:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.user-img{
+    width: 30px;
+}
+
+.user-name,
+.user-balance,
+#user-logout{
+    color: white;
+    font-size: 10px;
+
+}
+
+.user-container {
+    margin-left: 10px;
+    display: flex;
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px; /* 头像和文字间距 */
+}
+
+.user-text {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    line-height: 1.2;
+    gap: 5px;
+    text-align: right;
+}
+
+
+#dl-id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon-link {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(197, 195, 192);
+    font-weight: bold;
+}
+
+#gameshop-icon {
+    transform: translateY(20px);
+
+
+}
+
+#nav {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-shop,
+#nav-ware,
+#nav-support,
+#nav-service {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.layui-nav {
+    background-color: rgb(23, 29, 37);
+}
+
+/* 头部导航css结束 */
+
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#appbody {
+    flex: 1;
+    background-color: rgb(27,40,56);
+    background-size: cover;
+    background-position: center;
+}
+
+#app-next-div{
+    /* 	border: 1px solid white; */
+    width: 60%;
+    margin-left: 20%;
+}
+
+#search-games-input{
+    display: flex;
+    gap: 0;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+#search-game-text{
+    background-color: rgb(49,98,130);
+    color: white;
+    border: 0;
+    width: 300px;
+}
+
+#search-game-text:hover{
+    border: 1px solid rgb(76,154,204);
+}
+
+#m-top{
+    margin-top: 20px;
+}
+
+#search-games-list{
+    /* border: 1px solid white; */
+}
+
+
+#appbody {
+    margin: 0;
+    padding: 0;
+}
+
+#downloadloginindx-button {
+    background-color: rgb(92, 126, 16);
+    width: 100px;
+    height: 22px;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+}
+
+
+#downloadapp-text {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#header-background {
+    background-color: rgb(23, 29, 37);
+}
+
+#downloadloginindx-button,
+#loginindex {
+    transform: translateY(5px);
+    /* position: relative;
+                top: 5px;
+                text-decoration: none; */
+}
+
+#loginlink,
+#indexlink,
+#b1 {
+    color: rgb(184, 182, 180);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#loginlink:hover,
+#indexlink:hover {
+    color: white;
+}
+
+#dl-id {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon-link {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(197, 195, 192);
+    font-weight: bold;
+}
+
+#gameshop-icon {
+    transform: translateY(20px);
+
+
+}
+
+#nav {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-shop,
+#nav-ware,
+#nav-support,
+#nav-service {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.layui-nav {
+    background-color: rgb(23, 29, 37);
+}
+
+/* 头部导航css结束 */
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#appbody {
+    flex: 1;
+    background-color: rgb(27,40,56);
+    background-size: cover;
+    background-position: center;
+}
+
+#app-body-size{
+    width: 60%;
+    margin-left:20% ;
+}
+
+#tag-name{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+#search-games-list{
+    margin-top: 20px;
+}
+
+.games{
+    background-color: rgb(32,53,70);
+    margin-top: 5px;
+}
+
+
+.games-link{
+    color: white;
+    display: flex;
+    gap: 0;
+}
+
+.games-link:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.games-photo{
+    height: 70px;
+}
+
+.games-message{
+    display: flex;
+    gap: 0;
+    align-self: center;
+}
+
+.games-text{
+    margin-left: 20px;
+    width: 300px;
+}
+
+.games-issuingDate{
+    width: 200px;
+}
+
+.games-price{
+    width: 230px;
+    text-align: right;
+}
+
+.games-message:hover,
+.games:hover{
+    background-color: white;
+}
+
+#not-game{
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+
+}

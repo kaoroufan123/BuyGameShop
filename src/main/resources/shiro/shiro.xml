@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 配置凭证匹配器 -->
+    <bean id="credentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+        <property name="hashAlgorithmName" value="MD5"/>       <!-- 加密算法 -->
+        <property name="hashIterations" value="1000"/>            <!-- 迭代次数 -->
+        <property name="storedCredentialsHexEncoded" value="true"/><!-- 十六进制存储 -->
+    </bean>
+
+    <!-- 自定义Realm配置 -->
+    <bean id="myRealm" class="com.GameShop.realm.MyRealm">
+        <property name="credentialsMatcher" ref="credentialsMatcher"/>
+    </bean>
+
+    <!--安全管理器-->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="myRealm"/>
+    </bean>
+
+    <!--Shiro生命周期处理器-->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+    <!--Shiro过滤器-->
+    <bean class="org.springframework.web.filter.DelegatingFilterProxy" id="shiroFilter">
+        <property name="targetFilterLifecycle" value="true"/>
+        <property name="targetBeanName" value="shiroFilterFactoryBean"/>
+    </bean>
+
+    <!--shiro过滤器工厂-->
+    <bean id="shiroFilterFactoryBean" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/Login.jsp"/>
+        <!--<property name="unauthorizedUrl" value="/403"/>-->
+        <property name="filterChainDefinitions">
+            <value>
+                <!-- 登录接口放行 -->
+                /Login.jsp = anon
+                /Index.jsp = anon
+                /Support.jsp = anon
+                /SearchTag.jsp = anon
+                /GameProductIndex.jsp = anon
+                /SearchGames.jsp = anon
+                /PublisherIndex.jsp = anon
+                /css/** = anon
+                /JS/** = anon
+                /img/** = anon
+                /fonts/** = anon
+                /bootstrap-3.4.1-dist/**/** = anon
+                /layui/** = anon
+                /login/loginUser = anon
+                /login/index = anon
+                /index/findAllTags = anon
+                /index/findAllGames = anon
+                /index/findGamesPage = anon
+                /index/indexGamesMessage = anon
+                /index/support = anon
+                /tag/findGamesByTag = anon
+                /game/gameScreen = anon
+                /gameProduct/findGameProductLike = anon
+                /gamePublisher/findGameProductWithPublisherName = anon
+                /gamePublisher/findGamePublisherWithName = anon
+                /** = authc      <!-- 其他请求需要认证 -->
+            </value>
+            <!--authc-->
+        </property>
+    </bean>
+</beans>

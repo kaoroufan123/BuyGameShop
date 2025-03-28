@@ -1,0 +1,128 @@
+
+
+#appbody {
+    height: 620px;
+    background-color: rgb(34,39,43);
+    overflow-y: auto;
+}
+
+#body-inline {
+
+    padding: 20px;
+}
+
+/* #md6-body {
+	border: 1px solid white;
+}
+ */
+#basic-information {
+    display: flex;
+}
+
+#user-img {
+    width: 100px;
+}
+
+#user-name {
+    padding-left: 10px;
+    color: white;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+#user-signature {
+    padding: 10px;
+    color: white;
+}
+
+#user-name-div {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    /* border:1px solid white; */
+}
+
+#update-btn-div {
+    padding-left: 10px;
+}
+
+#update-btn {
+    padding-left: 10px;
+    height: 30px;
+    width: 100px;
+}
+
+#myWareHouse-text {
+    color: white;
+    padding: 10px;
+}
+
+#myWareHouse-div {
+    margin-top: 10px;
+    /* 模糊半径 */
+    backdrop-filter: blur(10px);
+    /* 半透明背景增强效果 */
+    background-color: rgb(165,175,185, 0.2);
+
+    border-radius: 3px;
+}
+
+#myWareHouse-body{
+    /* 模糊半径 */
+    backdrop-filter: blur(10px);
+    /* 半透明背景增强效果 */
+    background-color: rgb(85,100,116, 0.2);
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+    /* height: 300px; */
+}
+
+.games-ware-div{
+    margin-top: 10px;
+}
+
+.game-img{
+    width: 150px;
+}
+
+.games-ware{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    /* 模糊半径 */
+    backdrop-filter: blur(10px);
+    /* 半透明背景增强效果 */
+    background-color: rgb(31,39,49, 0.2);
+}
+
+.games-img-link{
+    text-decoration: none;
+    margin-left:10px;
+}
+
+.games-text-div{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.games-text{
+    color: white;
+}
+
+.games-text:hover{
+    color: rgb(97,182,231);
+    text-decoration: none;
+}
+
+.game-buyTime-div{
+    margin-left: auto;
+    margin-top: auto;
+    padding-right: 10px;
+    padding-bottom:10px;
+    letter-spacing: 0.2em;
+}
+
+.game-buyTime{
+    color: white;
+}

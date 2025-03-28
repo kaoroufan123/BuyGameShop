@@ -1,0 +1,170 @@
+
+#appbody {
+    height: 620px;
+    background-color: rgb(27, 40, 56);
+    overflow-y: auto;
+}
+
+
+#search-games-div{
+    display: flex;
+    gap: 0px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+
+#search-games{
+    width: 300px;
+    background-color: rgb(49,98,130);
+    color: white;
+    border: 0;
+}
+
+#search-games:hover{
+    border: 1px solid white;
+}
+
+
+#show-games{
+    width: 70%;
+    /* 	border: 1px solid deeppink; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#games-text{
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#carousel-and-text{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+}
+
+
+.flex-right{
+    flex: 1;
+}
+
+#show-games-carousel{
+    width:70%
+}
+
+#games-message-right{
+    width: 30%;
+    transform: translateX(10%);
+}
+
+#games-intro{
+    width: 85%;
+    color: white;
+    margin-top: 10px;
+}
+
+#issuingDate-div,
+#gamePublisher-div{
+    margin-top: 10px;
+    display: flex;
+    gap: 0;
+}
+
+#issuingDate-text,
+#gamePublisher-text{
+    width: 200px;
+    /* border: 1px solid black; */
+    color: rgb(85,103,114);
+}
+
+#issuingDate-date{
+    color: rgb(143,152,160);
+}
+
+#game-publisher-link{
+    color: rgb(103,193,245);
+
+}
+
+#game-publisher-link:hover{
+    color: white;
+    text-decoration: none;
+}
+
+#game-tag-div{
+    margin-top: 10px;
+    width: 90%;
+}
+
+#game-tag-text{
+    color: rgb(143,152,160);
+}
+
+.game-tag{
+    background-color: rgb(40,66,83);
+    color: rgb(103,193,245);
+    border: 1px solid rgb(40,66,83);
+    /* font-size: 10px; */
+}
+
+.game-tag:hover{
+    background-color: rgb(97,182,231);
+    color: white;
+}
+
+#game-price-div{
+    height: 70px;
+    /* border: 1px solid white; */
+    margin-top: 40px;
+    display: flex;
+    gap: 0;
+    background-color: rgb(68,83,97);
+    border-radius: 5px 5px 5px 5px;
+}
+
+#game-shop-name{
+    width: 300px;
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#game-shop-price-div{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: black;
+    display: flex;
+    gap: 0;
+    margin-top: 50px;
+}
+
+#game-shop-price{
+    color: white;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#game-price-btn{
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 100px;
+    border-radius: 2px 2px 2px 2px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: lighter;
+    border: 0;
+    background-color: rgb(106,166,33);
+    color: rgb(210,239,169);
+}
+
+#game-price-btn:hover{
+    color: white;
+    background-color: rgb(139,210,41);
+}

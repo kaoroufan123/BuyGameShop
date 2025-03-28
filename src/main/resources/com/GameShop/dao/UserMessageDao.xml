@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.GameShop.dao.UserMessageDao">
+    <resultMap id="user" type="com.GameShop.entity.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email"/>
+        <result property="photo" column="photo"/>
+        <result property="sex" column="sex"/>
+        <result property="birthDate" column="birthDate"/>
+        <result property="phone" column="phone"/>
+        <result property="signature" column="signature"/>
+    </resultMap>
+
+
+    <resultMap id="UserWareHouse" type="com.GameShop.entity.UserWareHouse">
+        <id property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="gameproduct_id" column="gameproduct_id"/>
+        <result property="addTime" column="addtime"/>
+
+        <association property="table_gameProduct" resultMap="table_gameProductList"/>
+    </resultMap>
+
+    <resultMap id="table_gameProductList" type="com.GameShop.entity.GameProduct">
+        <id property="id" column="gameproduct_table_id"/>
+        <result property="name" column="gameproduct_name"/>
+        <result property="gamePhoto" column="gameproduct_photo"/>
+    </resultMap>
+    
+    <select id="findUserMessageHeaderById" resultMap="user">
+        SELECT id,name,photo,signature FROM USER
+        <where>
+            id = #{id}
+        </where>
+    </select>
+
+    <select id="findUserGamesById" resultMap="UserWareHouse">
+        SELECT
+        uwh.id,
+        uwh.user_id,
+        uwh.gameproduct_id,
+        uwh.addtime,
+        gp.id as gameproduct_table_id,
+        gp.name as gameproduct_name,
+        gp.gamephoto as gameproduct_photo
+        FROM
+        userwarehouse AS uwh
+        LEFT JOIN gameproduct AS gp
+        ON uwh.gameproduct_id = gp.id
+        <where>
+            uwh.user_id = #{id}
+        </where>
+    </select>
+</mapper>

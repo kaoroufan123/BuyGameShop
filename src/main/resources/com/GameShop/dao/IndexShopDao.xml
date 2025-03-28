@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.GameShop.dao.IndexShopDao">
+    <resultMap id="gameProduct" type="com.GameShop.entity.GameProduct">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="gamePhoto" column="gamePhoto"/>
+        <result property="publisher_id" column="publisher_id"/>
+        <result property="tag" column="tag"/>
+        <result property="gameIntro" column="gameIntro"/>
+        <result property="issuingDate" column="issuingDate"/>
+        <result property="price" column="price"/>
+        <result property="mark" column="mark"/>
+        <result property="saleNum" column="saleNum"/>
+        <association property="publishersList" resultMap="publishersList"/>
+    </resultMap>
+    <resultMap id="publishersList" type="com.GameShop.entity.Publisher">
+        <id property="id" column="publisher_id"/>
+        <result property="name" column="publisher_name"/>
+        <result property="email" column="email"/>
+        <result property="password" column="password"/>
+        <result property="photo" column="photo"/>
+        <result property="establishDate" column="establishDate"/>
+        <result property="intro" column="intro"/>
+        <result property="balance" column="balance"/>
+    </resultMap>
+    <select id="findAllGames" resultMap="gameProduct">
+        SELECT
+        gp.id,
+        gp.name,
+        gp.gamephoto,
+        pub.name,  <!-- 添加别名避免列名冲突 -->
+        gp.tag,
+        gp.gameintro,
+        gp.issuingDate,
+        gp.price,
+        gp.mark,
+        gp.salesnum,
+        pub.id ,      <!-- 添加publisher字段 -->
+        pub.email,
+        pub.password,
+        pub.photo,
+        pub.establishDate,
+        pub.intro,
+        pub.balance
+        FROM gameproduct AS gp
+        LEFT JOIN publisher AS pub
+        ON gp.publisher_id = pub.id
+        limit 5
+    </select>
+    
+    <select id="findTotalCount" resultType="int">
+        select COUNT(*) from gameproduct
+    </select>
+
+    <select id="findAllGamesByCategory" resultMap="gameProduct">
+        SELECT
+        gp.id,
+        gp.name,
+        gp.gamephoto,
+        pub.name as publisher_name,  <!-- 添加别名避免列名冲突 -->
+        gp.tag,
+        gp.gameintro,
+        gp.issuingDate,
+        gp.price,
+        gp.mark,
+        gp.salesnum,
+        pub.id as publisher_id,      <!-- 添加publisher字段 -->
+        pub.email,
+        pub.password,
+        pub.photo,
+        pub.establishDate,
+        pub.intro,
+        pub.balance
+        FROM gameproduct AS gp
+        LEFT JOIN publisher AS pub
+        ON gp.publisher_id = pub.id
+        LIMIT  #{start} , #{total}
+    </select>
+
+    <select id="findGameById" resultMap="gameProduct">
+        SELECT
+        gp.id,
+        gp.name,
+        gp.gamephoto,
+        pub.name as publisher_name,  <!-- 添加别名避免列名冲突 -->
+        gp.tag,
+        gp.gameintro,
+        gp.issuingDate,
+        gp.price,
+        gp.mark,
+        gp.salesnum,
+        pub.id as publisher_id,      <!-- 添加publisher字段 -->
+        pub.email,
+        pub.password,
+        pub.photo,
+        pub.establishDate,
+        pub.intro,
+        pub.balance
+        FROM gameproduct AS gp
+        LEFT JOIN publisher AS pub
+        ON gp.publisher_id = pub.id
+        <where>
+            gp.id = #{id}
+        </where>
+    </select>
+
+    <select id="findGamesLikeByName" resultMap="gameProduct">
+        SELECT
+        gp.id,
+        gp.name,
+        gp.gamephoto,
+        pub.name as publisher_name,  <!-- 添加别名避免列名冲突 -->
+        gp.tag,
+        gp.gameintro,
+        gp.issuingDate,
+        gp.price,
+        gp.mark,
+        gp.salesnum,
+        pub.id as publisher_id,      <!-- 添加publisher字段 -->
+        pub.email,
+        pub.password,
+        pub.photo,
+        pub.establishDate,
+        pub.intro,
+        pub.balance
+        FROM gameproduct AS gp
+        LEFT JOIN publisher AS pub
+        ON gp.publisher_id = pub.id
+        <where>
+            gp.name LIKE CONCAT('%', #{name}, '%')
+        </where>
+    </select>
+
+    <select id="findGamesByTag" resultMap="gameProduct">
+        SELECT
+        gp.id,
+        gp.name,
+        gp.gamephoto,
+        pub.name as publisher_name,  <!-- 添加别名避免列名冲突 -->
+        gp.tag,
+        gp.gameintro,
+        gp.issuingDate,
+        gp.price,
+        gp.mark,
+        gp.salesnum,
+        pub.id as publisher_id,      <!-- 添加publisher字段 -->
+        pub.email,
+        pub.password,
+        pub.photo,
+        pub.establishDate,
+        pub.intro,
+        pub.balance
+        FROM gameproduct AS gp
+        LEFT JOIN publisher AS pub
+        ON gp.publisher_id = pub.id
+        <where>
+            gp.tag LIKE CONCAT('%', #{tag}, '%')
+        </where>
+    </select>
+</mapper>

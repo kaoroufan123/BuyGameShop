@@ -1,0 +1,145 @@
+#RegisterHtml{
+	margin: 0;
+	padding: 0;
+}
+
+#BackgroundColorSet{
+	background-color: rgb(23,29,37);
+	height: 100px;
+}
+
+/* #RegisterHeader{
+	 width: 100vw;
+	 height: 13.5vh;
+} */
+
+#DownloadLoginRegister{
+	margin-top: 5px;
+}
+
+#DownloadAppButton{
+	background-color: rgb(92,126,16);
+	width: 100px;
+	height: 22px;
+	border: 0;
+	display: flex;
+	align-items: center;
+	border-radius: 0;
+}
+
+#DownloadAppText{
+	font-size: 12px;
+	color: white;
+	font-weight: 100 ;
+}
+
+#LoginLink,#IndexLink,#b1{
+	color: rgb(184,182,180);
+}
+
+#LoginLink,#IndexLink,#b1{
+	position: relative;
+	top: 3px;
+	text-decoration: none;
+}
+
+#LoginLink:hover,#IndexLink:hover{
+	color: white;
+}
+
+#ICONTEXT{
+	text-decoration: none;
+	font-size: 30px;
+	color: rgb(197,195,192);
+	font-weight: bold;
+}
+
+#ICON{
+	width: 100px;
+	height: 70px;
+	align-items: center;
+	position: relative;
+	left: 120px;
+	top: 10px;
+	/* border: 1px solid white; */
+}
+
+.layui-nav{
+	background-color: rgb(23,29,37);
+}
+
+
+#nav{
+	position: relative;
+	top: 100px;
+}
+
+#SecondHeader{
+	display: flex;
+}
+
+.SecondHeaderFlex{
+	flex: 1;
+}
+
+#nav{
+	position: relative;
+	right: 220px;
+	top: 13px;
+}
+
+#NavShop,#NavWare,#NavSupport,#NavService{
+	text-decoration: none;
+	font-size: 18px;
+}
+
+
+.RegisterBody{
+	/* flex-grow: 1; */
+	background-color: rgb(33,36,41);
+	height: 637px;
+}
+
+.layui-input{
+	width: 300px;
+	background-color: rgb(50,53,60);
+	border-color: rgb(50,53,60);
+}
+
+.RegPublisherText{
+	color: rgb(184,182,180);
+}
+
+.layui-input{
+	color:white;
+}
+
+#JoinText{
+	color: white;
+	font-size: 30px;
+	font-weight: lighter;
+}
+
+#RegBtn{
+	width: 100px;
+}
+
+#CheckBoxText{
+	color: white;
+	font-weight: lighter;
+}
+
+#RegCheck{
+	display: inline-block;
+}
+
+.CB{
+	vertical-align: middle;
+}
+
+.layui-form-item{
+	width: 500px;
+	position: relative;
+	top: 50px;
+	left: 400px;
+}
