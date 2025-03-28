@@ -35,7 +35,7 @@
               </button>
               <div id="loginindex">
                 &nbsp;
-                <a href="${pageContext.request.contextPath}/Login.jsp" id="loginlink">登录</a>
+                <a href="${pageContext.request.contextPath}/login/loginLink" id="loginlink">登录</a>
                 &nbsp;<b id="b1">|</b>&nbsp;
                 <a href="${pageContext.request.contextPath}/login/index" id="indexlink">主页</a>
               </div>
@@ -48,14 +48,14 @@
           </div>
           <div id="nav">
             <ul class="layui-nav" id="layui-nav" lay-filter="">
-              <li class="layui-nav-item ">
+              <li class="layui-nav-item">
                 <a href="${pageContext.request.contextPath}/login/index" id="nav-shop">商店</a>
               </li>
-              <li class="layui-nav-item layui-this">
+              <li class="layui-nav-item  layui-this">
                 <a href="${pageContext.request.contextPath}/GameInventory/Inventory" id="nav-ware">库</a>
               </li>
               <li class="layui-nav-item">
-                <a href="${pageContext.request.contextPath}/Support.jsp" id="nav-support">支持</a>
+                <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
               </li>
               <li class="layui-nav-item">
                 <a href="" id="nav-service">服务</a>
@@ -72,87 +72,15 @@
         <button id="shopping" onclick="onClickShop()">商店</button>
       </div>
       <div id="body-left-scroll">
-
-        <%--<a href="#" class="scroll-link">
-          <div class="scroll-game">
-            <img src="imgs/apex header.jpg" alt="111" class="imgs" />
-            <span class="game-name">Apex Ledgends</span>
-          </div>
-        </a>--%>
-
       </div>
     </div>
     <div id="body-right">
       <div id="body-right-imgs">
-        <%--<div class="game-vertical-list">
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-        </div>
-
-        <div class="game-vertical-list">
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-
-          <div class="game-vertical">
-            <a href="#">
-              <img src="imgs/1694416925_619389.jpg" alt="games"/>
-            </a>
-          </div>
-        </div>--%>
-
       </div>
     </div>
   </div>
 </div>
-<%--<script src="${pageContext.request.contextPath}/layui/lay/modules/element.js"></script>--%>
+
 <script src="${pageContext.request.contextPath}/JS/jquery.js"></script>
 <script src="${pageContext.request.contextPath}/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
 <script src="${pageContext.request.contextPath}/layui/layui.js"></script>

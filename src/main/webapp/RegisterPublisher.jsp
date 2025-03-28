@@ -34,7 +34,7 @@
                                 </button>
                                 <div id="LoginIndex">
                                     &nbsp;
-                                    <a href="${pageContext.request.contextPath}/Login.jsp" id="loginlink">登录</a>
+                                    <a href="${pageContext.request.contextPath}/login/loginLink" id="loginlink">登录</a>
                                     &nbsp;<b id="b1">|</b>&nbsp;
                                     <a href="${pageContext.request.contextPath}/login/index" id="indexlink">主页</a>
                                 </div>
@@ -45,7 +45,7 @@
             </div>
             <div id="SecondHeader">
                 <div id="ICON" class="SecondHeaderFlex">
-                    <a href="#" id="ICONTEXT">GAMES</a>
+                    <a href="${pageContext.request.contextPath}/login/index" id="ICONTEXT">GAMES</a>
                 </div>
                 <div id="nav">
                     <ul class="layui-nav" id="layui-nav" lay-filter="">
@@ -56,7 +56,7 @@
                             <a href="${pageContext.request.contextPath}/GameInventory/Inventory" id="nav-ware">库</a>
                         </li>
                         <li class="layui-nav-item">
-                            <a href="${pageContext.request.contextPath}/Support.jsp" id="nav-support">支持</a>
+                            <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
                         </li>
                         <li class="layui-nav-item">
                             <a href="" id="nav-service">服务</a>

@@ -35,7 +35,7 @@
                             </button>
                             <div id="loginindex">
                                 &nbsp;
-                                <a href="${pageContext.request.contextPath}/Login.jsp" id="loginlink">登录</a>
+                                <a href="${pageContext.request.contextPath}/login/loginLink" id="loginlink">登录</a>
                                 &nbsp;<b id="b1">|</b>&nbsp;
                                 <a href="${pageContext.request.contextPath}/login/index" id="indexlink">主页</a>
                             </div>
@@ -48,16 +48,16 @@
                     </div>
                     <div id="nav">
                         <ul class="layui-nav" id="layui-nav" lay-filter="">
-                            <li class="layui-nav-item ">
+                            <li class="layui-nav-item">
                                 <a href="${pageContext.request.contextPath}/login/index" id="nav-shop">商店</a>
                             </li>
                             <li class="layui-nav-item">
                                 <a href="${pageContext.request.contextPath}/GameInventory/Inventory" id="nav-ware">库</a>
                             </li>
                             <li class="layui-nav-item">
-                                <a href="${pageContext.request.contextPath}/Support.jsp" id="nav-support">支持</a>
+                                <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
                             </li>
-                            <li class="layui-nav-item layui-this">
+                            <li class="layui-nav-item  layui-this">
                                 <a href="" id="nav-service">服务</a>
                             </li>
                         </ul>
@@ -71,30 +71,12 @@
             <div class="layui-col-md6 layui-col-md-offset3" id="md6-body">
                 <div id="body-inline">
                     <div id="basic-information">
-                        <%--<img src="#" alt="用户头像" id="user-img"/>
-                        <div id="user-name-div">
-                            <span id="user-name">烤肉饭</span>
-                            <span id="user-signature">你所热爱的就是你的生活你所热爱的就是你的生活你所热爱的就是你的生活</span>
-                            <div id="update-btn-div">
-                                <input type="button" id="update-btn" class="layui-btn" value="修改个人资料"/>
-                            </div>
-                        </div>--%>
+
                     </div>
                     <div id="myWareHouse-div">
                         <div id="myWareHouse-text">我的库</div>
                         <div id="myWareHouse-body">
                             <div class="games-ware-div">
-                                <%--<div class="games-ware">
-                                    <a href="#" class="games-img-link">
-                                        <img src="#" alt="game-header" class="game-img"/>
-                                    </a>
-                                    <div class="games-text-div">
-                                        <a href="#" class="games-text">APEX LEGENDS</a>
-                                    </div>
-                                    <div class="game-buyTime-div">
-                                        <span class="game-buyTime">2025年1月1日</span>
-                                    </div>
-                                </div>--%>
                             </div>
                         </div>
                     </div>

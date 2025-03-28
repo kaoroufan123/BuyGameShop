@@ -38,7 +38,7 @@
                             </button>
                             <div id="loginindex">
                                 &nbsp;
-                                <a href="${pageContext.request.contextPath}/Login.jsp" id="loginlink">登录</a>
+                                <a href="${pageContext.request.contextPath}/login/loginLink" id="loginlink">登录</a>
                                 &nbsp;<b id="b1">|</b>&nbsp;
                                 <a href="${pageContext.request.contextPath}/login/index" id="indexlink">主页</a>
                             </div>

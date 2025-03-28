@@ -68,6 +68,11 @@ public class LoginUserController {
         }
     }
 
+    @RequestMapping("/loginLink")
+    public String loginLink(){
+        return "/Login";
+    }
+
     @RequestMapping("/index")
     public String index() {
         return "/Index";

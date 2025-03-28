@@ -30,31 +30,31 @@
                         <div class="col-sm-3 col-sm-offset-8" id="dl-id">
                             <button id="downloadloginindx-button" class="col-sm-5 layui-btn">
                                 <i class="layui-icon" id="download-icon">&#xe601;</i>
-                                <b id="downloadapp-text">安装软件</b>
+                                <b id="downloadapp-text" onclick="linkSupport()">安装软件</b>
                             </button>
                             <div id="loginindex">
                                 &nbsp;
-                                <a href="Login.jsp" id="loginlink">登录</a>
+                                <a href="${pageContext.request.contextPath}/login/loginLink" id="loginlink">登录</a>
                                 &nbsp;<b id="b1">|</b>&nbsp;
-                                <a href="#" id="indexlink">主页</a>
+                                <a href="${pageContext.request.contextPath}/login/index" id="indexlink">主页</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="second-header">
                     <div id="gameshop-icon">
-                        <a href="#" id="icon-link">GAMES</a>
+                        <a href="${pageContext.request.contextPath}/login/index" id="icon-link">GAMES</a>
                     </div>
                     <div id="nav">
-                        <ul class="layui-nav" id="layui-nav">
-                            <li class="layui-nav-item">
-                                <a href="" id="nav-shop">商店</a>
-                            </li>
-                            <li class="layui-nav-item ">
-                                <a href="" id="nav-ware">库</a>
-                            </li>
+                        <ul class="layui-nav" id="layui-nav" lay-filter="">
                             <li class="layui-nav-item layui-this">
-                                <a href="" id="nav-support">支持</a>
+                                <a href="${pageContext.request.contextPath}/login/index" id="nav-shop">商店</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="${pageContext.request.contextPath}/GameInventory/Inventory" id="nav-ware">库</a>
+                            </li>
+                            <li class="layui-nav-item">
+                                <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
                             </li>
                             <li class="layui-nav-item">
                                 <a href="" id="nav-service">服务</a>
@@ -142,5 +142,6 @@
 <script src="${pageContext.request.contextPath}/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
 <script src="${pageContext.request.contextPath}/layui/layui.js"></script>
 <script src="${pageContext.request.contextPath}/JS/RegisterUser.js"></script>
+<script src="${pageContext.request.contextPath}/JS/Support.js"></script>
 </body>
 </html>
