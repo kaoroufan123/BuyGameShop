@@ -60,7 +60,7 @@
                                 <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
                             </li>
                             <li class="layui-nav-item">
-                                <a href="" id="nav-service">服务</a>
+                                <a href="${pageContext.request.contextPath}/service/linkService" id="nav-service">服务</a>
                             </li>
                         </ul>
                     </div>
@@ -71,9 +71,8 @@
     <div id="appbody-publisher">
         <div id="body-header">
             <div id="publisher-body">
-
                 <div id="publisher-img">
-                    <%--<img src="/img/publisherTx/ea/ea.jpg" alt="ea" id="imgs"/>--%>
+
                 </div>
                 <div id="publisher-text">
                     <div id="publisher-name">厂商名</div>

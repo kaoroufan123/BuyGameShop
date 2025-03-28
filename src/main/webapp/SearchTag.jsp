@@ -58,7 +58,7 @@
                 <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
               </li>
               <li class="layui-nav-item">
-                <a href="" id="nav-service">服务</a>
+                <a href="${pageContext.request.contextPath}/service/linkService" id="nav-service">服务</a>
               </li>
             </ul>
           </div>
@@ -70,10 +70,6 @@
     <div id="app-body-size">
       <div id="tag-name"><%--tag--%></div>
       <div id="search-games-list">
-
-
-
-
       </div>
     </div>
   </div>

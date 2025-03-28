@@ -57,8 +57,8 @@
                             <li class="layui-nav-item">
                                 <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
                             </li>
-                            <li class="layui-nav-item  layui-this">
-                                <a href="" id="nav-service">服务</a>
+                            <li class="layui-nav-item">
+                                <a href="${pageContext.request.contextPath}/service/linkService" id="nav-service">服务</a>
                             </li>
                         </ul>
                     </div>
