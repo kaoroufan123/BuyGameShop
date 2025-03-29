@@ -1,6 +1,6 @@
 package com.GameShop.controller;
 
-import com.GameShop.service.RegisterUserService;
+import com.GameShop.service.UserRetrievePasswordService;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.util.ByteSource;
@@ -11,37 +11,33 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @ClassName RegisterUserController
+ * @ClassName UserRetrievePasswordController
  * @Author KaoRouFan
- * @Date 2025/2/18 11:29
+ * @Date 2025/3/29 15:04
  * @Version 1.14.5.14
  */
+
 @Controller
-@RequestMapping("/registerUser")
-public class RegisterUserController {
+@RequestMapping("/retrievePassword")
+public class UserRetrievePasswordController {
 
     @Autowired
-    private RegisterUserService registerUserService;
+    private UserRetrievePasswordService userRetrievePasswordService;
 
-    @RequestMapping("/checkUserEmail")
+    @RequestMapping("/findEmail")
     @ResponseBody
-    public String checkUserEmail(@RequestParam(value = "email") String email) {
-        int index = registerUserService.checkUserEmail(email);
-        System.out.println(index);
-        if(index == 1){
-            return "success";
+    public String findEmail(@RequestParam("email")String email){
+        int indexEmail = userRetrievePasswordService.retrievePassword(email);
+        if(indexEmail == 1){
+            return "has";
         }else{
-            return "false";
+            return "none";
         }
     }
 
-    @RequestMapping("/insertUser")
+    @RequestMapping("/updatePassword")
     @ResponseBody
-    public String insertUser(@RequestParam(value = "name") String name,
-                             @RequestParam(value = "email") String email,
-                             @RequestParam(value = "password") String password,
-                             @RequestParam(value = "phone") String phone,
-                             @RequestParam(value = "regTime") String regTime) {
+    public String updatePassword(@RequestParam("password")String password, @RequestParam("email")String email){
 
         String salt = new SecureRandomNumberGenerator().nextBytes().toHex(); // 生成随机盐
         String encryptedPassword = new SimpleHash(
@@ -51,8 +47,8 @@ public class RegisterUserController {
                 1000                 // 迭代次数
         ).toHex();             // 转为16进制
 
-        int indexInsert = registerUserService.registerUser(name, email, encryptedPassword, phone, regTime,salt);
-        if(indexInsert > 0){
+        int indexUpdate = userRetrievePasswordService.updatePassword(encryptedPassword, salt,email);
+        if(indexUpdate == 1){
             return "success";
         }else{
             return "fail";

@@ -20,10 +20,13 @@ public class PasswordMD5 {
     public static void main(String[] args) {
 
         // 注册时生成加密密码
-        /*String salt1 = new SecureRandomNumberGenerator().nextBytes().toHex(); // 生成随机盐
-        String encryptedPwd = new SimpleHash(
+        /*String salt1 = new SecureRandomNumberGenerator().nextBytes().toHex(); */    // 生成随机盐
+
+       /* String salt1 = "5d6ca08d58a4c9081aeba30f75aa811b";*/
+
+        /*String encryptedPwd = new SimpleHash(
                 "MD5",             // 算法
-                "123456",       // 原始密码
+                "7355608",       // 原始密码
                 ByteSource.Util.bytes(salt1),  // 盐
                 1000                 // 迭代次数
         ).toHex();             // 转为16进制
@@ -32,10 +35,12 @@ public class PasswordMD5 {
 
 
         // 验证原理
-        String dbPassword = "9b64c5f00039ea6a14db871ba330cd4d"; // 数据库存储的密码
+        String dbPassword = "10e87f85091daca5e48572688c39dbb6 "; // 数据库存储的密码
         String inputPassword = "7355608"; // 用户输入的密码
-        String salt = "61f7400676fe3696f7e082efedacdf03";       // 数据库存储的盐值
+        String salt = "17ea845ca6efef6e6539f013c7b53fd8";       // 数据库存储的盐值
         int iterations = 1000;              // 与注册时相同的迭代次数
+
+        //20cf29513cb115354d34fd6122071558
 
 // Shiro内部计算
         String computedHash = new SimpleHash("MD5", inputPassword, salt, iterations).toHex();

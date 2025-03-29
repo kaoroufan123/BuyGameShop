@@ -23,4 +23,9 @@ public class GameServiceController {
     public String ServiceLinkREG(){
         return "RegisterUser";
     }
+
+    @RequestMapping("/retrievePassword")
+    public String RetrievePassword(){
+        return "RetrievePassword";
+    }
 }

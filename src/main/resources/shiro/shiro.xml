@@ -57,6 +57,7 @@
                 /PublisherIndex.jsp = anon
                 /Service.jsp = anon
                 /RegisterUser.jsp = anon
+                /RetrievePassword.jsp = anon
                 /css/** = anon
                 /JS/** = anon
                 /img/** = anon
@@ -79,9 +80,11 @@
                 /gamePublisher/findGamePublisherWithName = anon
                 /service/linkService = anon
                 /service/registerUser = anon
+                /service/retrievePassword = anon
+                /retrievePassword/findEmail = anon
+                /retrievePassword/updatePassword = anon
                 /** = authc      <!-- 其他请求需要认证 -->
             </value>
-            <!--authc-->
         </property>
     </bean>
 </beans>
