@@ -12,10 +12,13 @@ import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * @ClassName MyRealm
@@ -72,7 +75,8 @@ public class MyRealm  extends AuthorizingRealm {
         }
 
         //将用户存储进session中
-        Session session = SecurityUtils.getSubject().getSession();
+        Subject currentUser  = SecurityUtils.getSubject();
+        Session session = currentUser.getSession();
         session.setAttribute("user",user);
 
         // 返回认证信息对象

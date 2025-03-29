@@ -94,7 +94,7 @@
               <button class="layui-btn" id="login-btn" onclick="login()">登录</button>
             </div>
             <div id="nologinhelper-div">
-              <a href="#" id="loginhelper">请求帮助，我无法登录</a>
+              <a href="${pageContext.request.contextPath}/service/linkService" id="loginhelper">请求帮助，我无法登录</a>
             </div>
           </div>
         </div>

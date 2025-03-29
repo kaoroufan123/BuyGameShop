@@ -5,6 +5,7 @@ import com.GameShop.service.FindUserNameAndPhotoService;
 import com.GameShop.utils.Result;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,20 +32,23 @@ public class FindUserNameAndPhotoController {
     @RequestMapping("/findUserNAP")
     public Map<String, Object>   home() {
         // 从 Shiro 的 Session 中获取用户信息
-        Session session = SecurityUtils.getSubject().getSession();
+
+        /*Subject currentUser  = SecurityUtils.getSubject();
+        Session session = currentUser.getSession();
+        session.setAttribute("user",user);*/
+
+        Subject subject = SecurityUtils.getSubject();
+        Session session = subject.getSession();
         User currentUser = (User) session.getAttribute("user");
 
 
         User user = findUserNameAndPhotoService.findUserNameAndPhoto(currentUser.getId());
 
-        /*System.out.println(currentUser);*/
-        /* new Result(200, "查询成功", user);*/
         Map<String, Object> map = new HashMap<>();
         map.put("userName", user.getName());
         map.put("userPhoto", user.getPhoto());
         map.put("userBalance", user.getBalance());
-        map.put("userId", currentUser.getId());
-        /*System.out.println(map);*/
+        map.put("userId", user.getId());
         return map;
     }
 }

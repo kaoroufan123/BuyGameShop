@@ -10,7 +10,7 @@
     <result property="password" column="password"/>
     <result property="photo" column="photo"/>
     <result property="sex" column="sex"/>
-    <result property="birthday" column="birthday"/>
+    <result property="birthDate" column="birthdate"/>
     <result property="phone" column="phone"/>
     <result property="regTime" column="regTime"/>
     <result property="logTime" column="logTime"/>
@@ -38,13 +38,6 @@
             email = #{email}
         </where>
     </update>
-    <!--使用shiro作为登录-->
-<!--    <select id="getLoginUser" parameterType="string" resultMap="user">
-        select * from user
-        <where>
-            email = #{email}
-            password = #{password}
-        </where>
-    </select>-->
+
 
 </mapper>

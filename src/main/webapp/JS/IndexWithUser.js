@@ -8,7 +8,7 @@ $(function () {
         type: "POST",
         dataType: "JSON",
         success: function (result) {
-                        /*console.log(result);*/
+                        console.log(result);
                         /*console.log(result.userName);*/
             app = app +
                 "<div class='user-container'>"
@@ -20,7 +20,7 @@ $(function () {
                 + "<a href='/index/linkUserMessage'><img src='../" + result.userPhoto + "' alt='用户头像' class='user-img'/></a>"
                 +"<a href='#' id='user-logout' onclick='userLoginOut()'>退出登录</a>"
                 +"</div>";
-            /*console.log(app);*/
+                /*console.log(app);*/
             $("#loginindex").html(app);
             sessionStorage.setItem("userId", result.userId);
         }
@@ -31,6 +31,7 @@ $(function () {
 function userLoginOut(){
     let logoutCheck = confirm("确定退出登录吗？");
     if (logoutCheck) {
+        sessionStorage.setItem("userId", "");
         location.href = "/auth/logout";
     }
 }
