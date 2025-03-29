@@ -47,7 +47,7 @@
                     </div>
                     <div id="nav">
                         <ul class="layui-nav" id="layui-nav" lay-filter="">
-                            <li class="layui-nav-item layui-this">
+                            <li class="layui-nav-item ">
                                 <a href="${pageContext.request.contextPath}/login/index" id="nav-shop">商店</a>
                             </li>
                             <li class="layui-nav-item">
@@ -56,7 +56,7 @@
                             <li class="layui-nav-item">
                                 <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
                             </li>
-                            <li class="layui-nav-item">
+                            <li class="layui-nav-item layui-this">
                                 <a href="${pageContext.request.contextPath}/service/linkService" id="nav-service">服务</a>
                             </li>
                         </ul>
@@ -73,7 +73,7 @@
                     <div id="game_service_welcome">您有什么需要帮忙的吗？</div>
                 </div>
                 <div id="my_service_div">
-                    <a href="#" class="my_service_link">
+                    <a href="${pageContext.request.contextPath}/service/registerUser" class="my_service_link">
                         <div class="my_service">
                             <div class="my_service_text">注册账号</div>
                             <div class="my_service_icon_div">

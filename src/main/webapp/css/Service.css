@@ -1,0 +1,63 @@
+#appbody {
+    height: 620px;
+    overflow-y: auto;
+    background: rgb(31, 48, 68) linear-gradient(to right, black 0%, rgb(31, 48, 68) 20%, rgb(31, 48, 68) 80%, black 100%);
+}
+
+#body_header{
+    /* border: 1px solid white; */
+}
+
+#game_service_text{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#game_service_welcome{
+    padding-top: 10px;
+    color: rgb(86,166,217);
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(63,141,189);
+}
+
+
+.my_service_link:hover{
+    text-decoration: none;
+}
+
+.my_service{
+    margin-top: 20px;
+    height: 70px;
+    /* border: 1px solid white; */
+}
+
+.my_service{
+    background-color: rgb(68,84,104);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+.my_service:hover{
+    background-color: rgb(69,129,165);
+}
+
+.my_service_text{
+    padding-left: 20px;
+}
+
+.my_service_icon_div{
+    margin-left: auto;
+    padding-right: 20px;
+
+}
+
+.my_service_right_icon{
+    width: 20px;
+}

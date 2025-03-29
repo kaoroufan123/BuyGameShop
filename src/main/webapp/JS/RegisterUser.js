@@ -1,16 +1,10 @@
 layui.use('element', function () {
     var element = layui.element;
-})
+});
 
 layui.use('form', function () {
     var form = layui.form;
 })
-
-/*//监听提交
-form.on('submit(formDemo)', function (data) {
-    layer.msg(JSON.stringify(data.field));
-    return false;
-});*/
 
 function regUser() {
     let name = document.getElementById("name").value;
@@ -44,25 +38,25 @@ function regUser() {
 }
 
 function reg(name,email,password,phone,regTime) {
-   /* alert("name="+name+" email="+email+" password="+password+" phone="+phone+" regTime="+regTime);*/
 
     $.ajax({
-        async: false,
-        type: "get",
+
         url: "/registerUser/checkUserEmail",
+        type: "get",
         dataType: "text",
         data: {
             email: email
         },
         success: function (data) {
-            alert(data);
-            if (data == "has") {
+            console.log(data);
+            if (data === "success") {
                 alert("邮箱已存在！");
-            } else if (data == "none") {
+            } else if (data === "false") {
+                /*alert("可以注册");*/
                 $.ajax({
-                    async: false,
-                    type: "get",
+
                     url: "/registerUser/insertUser",
+                    type: "get",
                     dataType: "text",
                     data: {
                         name: name,
@@ -72,10 +66,9 @@ function reg(name,email,password,phone,regTime) {
                         regTime: regTime
                     },
                     success: function (result) {
-                        if(result == "success"){
+                        if(result === "success"){
                             alert("注册成功！");
-                            document.forms[0].action="../RegisterSuccess.jsp";
-                            document.forms[0].submit();
+                            window.location.href = "../RegisterSuccess.jsp";
                         }else{
                             alert("注册失败！");
                         }

@@ -13,8 +13,8 @@
 
     <!--用户名 邮箱 密码 手机 注册时间-->
     <insert id="registerUser">
-        INSERT INTO USER(name,password,email,photo,sex,birthdate,phone,regTime,logTime,signature,balance,status) VALUES
-       (#{name},#{password},#{email},'img/userTx/default.jpeg','2','2000-01-01',#{phone},#{regTime},'2000-01-01','无','0','0');
+        INSERT INTO USER(name,password,email,photo,sex,birthdate,phone,regTime,logTime,signature,balance,status,salt) VALUES
+       (#{name},#{password},#{email},'img\\userTx\\default.jpeg','2','2000-01-01',#{phone},#{regTime},'2000-01-01','无','0','0',#{salt});
 
     </insert>
 </mapper>

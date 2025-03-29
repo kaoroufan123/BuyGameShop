@@ -18,4 +18,9 @@ public class GameServiceController {
     public String ServiceLink(){
         return "Service";
     }
+
+    @RequestMapping("/registerUser")
+    public String ServiceLinkREG(){
+        return "RegisterUser";
+    }
 }

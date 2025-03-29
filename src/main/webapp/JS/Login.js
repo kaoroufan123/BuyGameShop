@@ -60,8 +60,7 @@ function checkMessage(email, password) {
     }
 }
 
-function format(dataString)
-{
+function format(dataString) {
     //dataString是整数，否则要parseInt转换
     var time = new Date(dataString);
     var year = time.getFullYear();
@@ -74,7 +73,6 @@ function format(dataString)
 }
 
 function  updateLogTimeJS(email,logTime){
-    let data1;
     $.ajax({
         url:"login/updateLogTime",
         dataType:"JSON",
@@ -82,7 +80,6 @@ function  updateLogTimeJS(email,logTime){
         data:{
             "logTime":logTime,
             "email":email
-
         }
     })
 }

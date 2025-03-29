@@ -47,7 +47,7 @@
                     </div>
                     <div id="nav">
                         <ul class="layui-nav" id="layui-nav" lay-filter="">
-                            <li class="layui-nav-item layui-this">
+                            <li class="layui-nav-item ">
                                 <a href="${pageContext.request.contextPath}/login/index" id="nav-shop">商店</a>
                             </li>
                             <li class="layui-nav-item">
@@ -56,7 +56,7 @@
                             <li class="layui-nav-item">
                                 <a href="${pageContext.request.contextPath}/index/support" id="nav-support">支持</a>
                             </li>
-                            <li class="layui-nav-item">
+                            <li class="layui-nav-item layui-this">
                                 <a href="${pageContext.request.contextPath}/service/linkService" id="nav-service">服务</a>
                             </li>
                         </ul>
@@ -82,6 +82,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div id="email-div">
                                     <div class="layui-form-item">
                                         <div id="reg-email-text">电子邮件地址</div>
@@ -91,6 +92,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div id="password-div">
                                     <div class="layui-form-item">
                                         <div id="reg-password-text">密码</div>
@@ -100,6 +102,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div id="checkPassword-div">
                                     <div class="layui-form-item">
                                         <div id="reg-checkPassword-text">确认密码</div>
@@ -109,6 +112,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div id="phone-div">
                                     <div class="layui-form-item">
                                         <div id="reg-phone-text">手机</div>
@@ -129,6 +133,7 @@
                             <div id="button-div">
                                 <button class="layui-btn" id="layui-btn" onclick="regUser()">注册</button>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -137,11 +142,11 @@
     </div>
 </div>
 <!-- 引入相关JS文件 -->
-<script src="${pageContext.request.contextPath}/layui/lay/modules/element.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap-3.4.1-dist/js/jquery.js"></script>
-<script src="${pageContext.request.contextPath}/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
 <script src="${pageContext.request.contextPath}/layui/layui.js"></script>
+<script src="${pageContext.request.contextPath}/JS/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/bootstrap-3.4.1-dist/js/bootstrap.js"></script>
 <script src="${pageContext.request.contextPath}/JS/RegisterUser.js"></script>
+<script src="${pageContext.request.contextPath}/JS/IndexWithUser.js"></script>
 <script src="${pageContext.request.contextPath}/JS/Support.js"></script>
 </body>
 </html>

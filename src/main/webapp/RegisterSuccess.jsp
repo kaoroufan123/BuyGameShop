@@ -36,7 +36,7 @@
     <div id="success-text">注册完成，等待<span id="second">5</span>秒后自动跳转</div>
 </div>
 <div id="link-skip">
-    <div id="link-skip-text">如果未跳转，请<a href="Login.jsp" id="skip">点击这里</a></div>
+    <div id="link-skip-text">如果未跳转，请<a href="${pageContext.request.contextPath}/login/loginLink" id="skip">点击这里</a></div>
 </div>
 <script src="JS/jquery.js"></script>
 <script>
@@ -54,7 +54,7 @@
                 time--;
             } else {
                 clearInterval(timer);
-                location.href = "Login.jsp";
+                location.href = "${pageContext.request.contextPath}/login/loginLink";
             }
         },
         1000

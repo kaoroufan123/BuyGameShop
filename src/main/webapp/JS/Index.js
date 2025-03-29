@@ -14,11 +14,6 @@ layui.use('carousel', function () {
         height: "465px",//设置容器宽度
         arrow: 'always',//始终显示箭头
         anim: 'fade',
-        /*change: function (obj) {
-            let currentIndex = obj.index(); // 获取当前图片索引
-            console.log("下标是：" + currentIndex);
-            updateTextContent(currentIndex);
-        }*/
     });
 
 
@@ -26,7 +21,6 @@ layui.use('carousel', function () {
 
     function ajaxGet(callback) {    //使用Ajax查找所有游戏数据
         $.ajax({
-
             url: "/index/findAllGames",
             type: "GET",
             dataType: "JSON",
@@ -47,14 +41,6 @@ layui.use('carousel', function () {
         })
     }
 
-    //触发轮播切换事件
-    /*    let index = 1;
-        carousel.on('change(carousel)', function(obj){
-            //当前条目的索引
-           /!* console.log(obj.index);*!/
-            index = obj.index;
-        });*/
-
     setTimeout(function () {
 
         // 调用 ajaxGet 函数
@@ -62,8 +48,6 @@ layui.use('carousel', function () {
 
             // 插入新内容到轮播图
             $('#carouselItem').append(appGames);
-
-            /*updateTextContent(index);*/
 
             // 重新渲染轮播图（假设 carouselInstance 已定义）
             if (carouselInstance && typeof carouselInstance.reload === 'function') {
@@ -75,22 +59,6 @@ layui.use('carousel', function () {
             }
         })
     });
-
-    // 定义更新文本内容的函数
-    /*function updateTextContent(index) {
-        if(gameData[index]) {
-            const currentGame = gameData[index];
-            console.log(currentGame);
-            $("#game-text").text(currentGame.name);
-            $("#game-publisher").text(currentGame.publishersList[0].name);
-            if(currentGame.price === 0){
-                $("#game-price").text("免费开玩");
-            }else{
-                $("#game-price").text("￥"+currentGame.price);
-            }
-        }
-    }*/
-
 });
 
 function searchGame() {

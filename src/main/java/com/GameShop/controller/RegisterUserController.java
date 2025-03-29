@@ -26,11 +26,12 @@ public class RegisterUserController {
     @RequestMapping("/checkUserEmail")
     @ResponseBody
     public String checkUserEmail(@RequestParam(value = "email") String email) {
-        int checkEmail = registerUserService.checkUserEmail(email);
-        if (checkEmail == 1) {
-            return "has";
-        } else {
-            return "none";
+        int index = registerUserService.checkUserEmail(email);
+        System.out.println(index);
+        if(index == 1){
+            return "success";
+        }else{
+            return "false";
         }
     }
 
@@ -49,6 +50,7 @@ public class RegisterUserController {
                 ByteSource.Util.bytes(salt1),  // 盐
                 1000                 // 迭代次数
         ).toHex();             // 转为16进制
+
 
         int indexInsert = registerUserService.registerUser(name, email, encryptedPwd, phone, regTime,salt1);
         if(indexInsert > 0){
