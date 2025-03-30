@@ -38,7 +38,7 @@ $(function (){
             +"</div>"
             +"</a>"
 
-            +"<a href='#' class='my_service_link'>"
+            +"<a href='/GameRefund/linkGR' class='my_service_link'>"
             +"<div class='my_service'>"
             +"<div class='my_service_text'>游戏退款</div>"
             +"<div class='my_service_icon_div'>"

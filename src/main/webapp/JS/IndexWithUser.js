@@ -8,7 +8,7 @@ $(function () {
         type: "POST",
         dataType: "JSON",
         success: function (result) {
-                        console.log(result);
+                        /*console.log(result);*/
                         /*console.log(result.userName);*/
             app = app +
                 "<div class='user-container'>"

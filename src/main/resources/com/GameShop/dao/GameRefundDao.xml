@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.GameShop.dao.GameRefundDao">
+    <resultMap id="userwarehouse" type="com.GameShop.entity.UserWareHouse">
+        <id property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="gameproduct_id" column="gameproduct_id"/>
+        <result property="user_id" column="user_id"/>
+
+        <association property="table_gameProduct" resultMap="gameproduct"/>
+    </resultMap>
+
+    <resultMap id="gameproduct" type="com.GameShop.entity.GameProduct">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="gamePhoto" column="gamePhoto"/>
+    </resultMap>
+
+    <select id="findGameProductByUserId" resultMap="userwarehouse">
+        SELECT
+            uwh.id,uwh.gameproduct_id,uwh.user_id,gp.id,gp.name,gp.gamephoto
+        FROM
+            userwarehouse AS uwh
+                LEFT JOIN
+                gameproduct AS gp
+                    ON
+                        uwh.gameproduct_id = gp.id
+        <where>
+            uwh.user_id = #{id}
+        </where>
+    </select>
+</mapper>

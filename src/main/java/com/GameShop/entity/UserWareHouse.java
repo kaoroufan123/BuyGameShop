@@ -18,6 +18,6 @@ public class UserWareHouse implements Serializable {
     private int user_id;
     private int gameproduct_id;
     private String addTime;
-    /*private List<User> table_user;*/
+    private List<User> table_user;
     private List<GameProduct> table_gameProduct;
 }
