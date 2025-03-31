@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.GameShop.dao.RefundMessageDao">
+    <resultMap id="userwarehouse" type="com.GameShop.entity.UserWareHouse">
+        <id property="id" column="id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="gameproduct_id" column="gameproduct_id"/>
+        <result property="user_id" column="user_id"/>
+        <result property="addTime" column="addtime"/>
+        <association property="table_gameProduct" resultMap="gameproduct"/>
+        <association property="table_user" resultMap="user"/>
+    </resultMap>
+
+    <resultMap id="gameproduct" type="com.GameShop.entity.GameProduct">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="gamePhoto" column="gamePhoto"/>
+        <result property="price" column="gp_price"/>
+    </resultMap>
+
+    <resultMap id="user" type="com.GameShop.entity.User">
+        <id property="id" column="user_id"/>
+        <result property="name" column="user_name"/>
+        <result property="balance"  column="balance"/>
+    </resultMap>
+
+    <resultMap id="userBalanceRm" type="com.GameShop.entity.User">
+        <id property="id" column="user_id"/>
+        <result property="balance" column="balance"/>
+    </resultMap>
+
+    <select id="findGameById" resultMap="userwarehouse">
+        SELECT
+        uwh.id,
+        uwh.gameproduct_id,
+        uwh.addtime,
+        gp.id,
+        gp.name,
+        gp.gamephoto,
+        gp.price as gp_price,
+        user.id as user_id,
+        user.name as user_name
+        FROM
+        userwarehouse AS uwh
+        LEFT JOIN
+        gameproduct AS gp
+        ON
+        uwh.gameproduct_id = gp.id
+        LEFT JOIN
+        USER
+        ON
+        user.id = uwh.user_id
+        <where>
+            uwh.user_id = #{id} and gp.id = #{gpId}
+        </where>
+    </select>
+
+    <select id="findUserPrice" resultMap="userBalanceRm">
+        select id,balance from user
+        <where>
+            id = #{id}
+        </where>
+    </select>
+
+    <update id="updateUserBalance">
+        update user
+        <set>
+            balance = #{newBalance}
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <delete id="deleteUWHByGpId">
+        DELETE FROM userwarehouse WHERE gameproduct_id = #{gpId}
+    </delete>
+</mapper>

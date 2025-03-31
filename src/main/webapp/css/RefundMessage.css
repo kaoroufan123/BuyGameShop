@@ -1,0 +1,75 @@
+#appbody {
+    height: 620px;
+    overflow-y: auto;
+    background: rgb(31, 48, 68) linear-gradient(to right, black 0%, rgb(31, 48, 68) 20%, rgb(31, 48, 68) 80%, black 100%);
+}
+
+#body_header{
+    border: 1px solid white;
+}
+
+#game_header_text{
+    margin-top: 50px;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(65,175,211);
+}
+
+#game_refund_div{
+    margin-top: 10px;
+
+}
+
+#game_refound_bgc_div{
+    padding: 10px;
+    background-color: rgb(14,26,41);
+}
+
+#game_IaT{
+    display: flex;
+}
+
+#game_image{
+    width: 250px;
+}
+
+#game_name_text{
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#game_fBody{
+    display: flex;
+}
+
+#game_ad{
+    margin-left: 70px;
+}
+
+.game_ad_text{
+    color: rgb(65,175,211);
+}
+
+#username{
+    color: rgb(180,180,180);
+}
+
+#addTime{
+    color: rgb(180,180,180);
+}
+
+#addTime_text,
+#refund_btn_div{
+    margin-top: 5px	;
+}
+
+#refund_btn_div{
+    padding-top: 10px;
+}
+
+#refund_btn{
+    width:100px;
+}

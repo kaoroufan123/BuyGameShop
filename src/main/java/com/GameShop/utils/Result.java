@@ -1,32 +1,44 @@
 package com.GameShop.utils;
 
-import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
- * @ClassName Result
- * @Author KaoRouFan
- * @Date 2025/3/25 18:56
- * @Version 1.14.5.14
+ * 统一返回的包装类
  */
 
-
-@Data
-public class Result<T> {
-    private int code;
+@Setter
+@Getter
+public class Result {
+    private String code;
     private String msg;
-    private T data;
+    private Object data;
 
-    public Result(int i, String success, Object data) {
-
+    public static Result success() {
+        Result result = new Result();
+        result.setCode("200");
+        result.setMsg("请求成功");
+        return result;
     }
 
-    // 省略构造方法和静态方法
     public static Result success(Object data) {
-        return new Result(200, "success", data);
+        Result result = success();
+        result.setData(data);
+        return result;
     }
 
-    public static Result error(String msg) {
-        return new Result(500, msg, null);
+    public static Result error() {
+        Result result = new Result();
+        result.setCode("500");
+        result.setMsg("系统错误");
+        return result;
     }
+
+    public static Result error(String code, String msg) {
+        Result result = new Result();
+        result.setCode(code);
+        result.setMsg(msg);
+        return result;
+    }
+
 }

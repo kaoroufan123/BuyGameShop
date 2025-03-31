@@ -4,7 +4,7 @@ layui.use('element', function () {
 
 $(function (){
     let id = sessionStorage.getItem('userId');
-    console.log(id);
+/*    console.log(id);*/
 
     if(id == null || id == ""){
         let appNone =

@@ -48,7 +48,7 @@ function findUserGameProduct(dataList){
     let appList = "";
     for(let i = 0;i<dataList.length;i++){
         let date = changeDate(dataList[i].addTime);
-        console.log(date);
+        /*console.log(date);*/
         appList = appList
             +"<div class='games-ware'>"
             +"<a href='/index/indexGamesMessage?id="+dataList[i].gameproduct_id+"' class='games-img-link'>"
