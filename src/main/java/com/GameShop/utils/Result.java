@@ -1,5 +1,6 @@
 package com.GameShop.utils;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,8 +8,7 @@ import lombok.Setter;
  * 统一返回的包装类
  */
 
-@Setter
-@Getter
+@Data
 public class Result {
     private String code;
     private String msg;

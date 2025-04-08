@@ -1,7 +1,7 @@
 package com.GameShop.service;
 
 import com.GameShop.entity.GameScreen;
-import org.springframework.data.repository.query.Param;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,4 +15,11 @@ import java.util.List;
 public interface GameProductMessageService {
     //查询指定id的游戏截图
     public List<GameScreen> findGameScreenById(int id);
+
+    //通过userId和gameId查询该游戏是否在该用户的游戏库中存在
+    public int findUWHGameByUidGid(int userId, int gameId);
+
+    public int findSCGameByUidGid(int userId,int gameId);
+
+    public int insertSC(int userId, int gpId, double price);
 }

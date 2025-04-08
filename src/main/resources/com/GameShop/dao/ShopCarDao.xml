@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.GameShop.dao.ShopCarDao">
+    <resultMap id="gameShop" type="com.GameShop.entity.ShopCar">
+        <id property="id" column="sc_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="gameProduct_id" column="gameProduct_id"/>
+        <result property="price" column="price"/>
+        <association property="table_gameProduct" resultMap="table_gameProduct"/>
+    </resultMap>
+
+    <resultMap id="table_gameProduct" type="com.GameShop.entity.GameProduct">
+        <id property="id" column="gp_id"/>
+        <result property="name" column="name"/>
+        <result property="gamePhoto" column="gamephoto"/>
+    </resultMap>
+
+    <select id="findShopCarByUserId" resultMap="gameShop">
+        SELECT
+            sc.id as sc_id,
+            sc.user_Id,
+            sc.gameproduct_id,
+            sc.price,
+            gp.id as gp_id,
+            gp.name,
+            gp.gamephoto
+        FROM
+            shoppingcar AS sc
+                LEFT JOIN
+                gameproduct AS gp
+                    ON sc.gameproduct_id = gp.id
+        <where>
+            sc.user_id = #{userId}
+        </where>
+    </select>
+</mapper>

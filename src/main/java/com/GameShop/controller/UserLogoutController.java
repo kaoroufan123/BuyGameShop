@@ -28,6 +28,6 @@ public class UserLogoutController {
             subject.logout();
         }
         // 重定向到登录页面
-        return "Login";
+        return "redirect:/Login";
     }
 }

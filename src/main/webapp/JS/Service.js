@@ -29,7 +29,7 @@ $(function (){
         $("#my_service_div").html(appNone);
     }else{
         let app =
-            "<a href='#' class='my_service_link'>"
+            "<a href='/apiUP/linkUP' class='my_service_link'>"
             +"<div class='my_service'>"
             +"<div class='my_service_text'>修改密码</div>"
             +"<div class='my_service_icon_div'>"

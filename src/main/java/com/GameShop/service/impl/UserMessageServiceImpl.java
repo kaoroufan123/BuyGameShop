@@ -30,4 +30,9 @@ public class UserMessageServiceImpl implements UserMessageService {
     public List<UserWareHouse> findUserGamesById(int id) {
         return userMessageDao.findUserGamesById(id);
     }
+
+    @Override
+    public double findUserBalanceById(int id) {
+        return userMessageDao.findUserBalanceById(id);
+    }
 }

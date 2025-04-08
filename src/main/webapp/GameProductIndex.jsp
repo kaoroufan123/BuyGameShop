@@ -91,7 +91,10 @@
                         <div id="game-shop-name">购买游戏</div>
                         <div id="game-shop-price-div">
                             <div id="game-shop-price">￥399.00</div>
-                            <button id="game-price-btn">获取游戏</button>
+                            <div id="game-price-btn-div">
+                                <button id="game-price-btn">获取游戏</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -131,7 +134,7 @@
     let gameData = JSON.parse('<c:out value="${gameProduct}" escapeXml="false"/>');
 
     // 控制台打印数据
-    console.log("接收到的游戏数据：", gameData);
+    /*console.log("接收到的游戏数据：", gameData);*/
     /*console.log(gameData.gamePhoto);*/
 
     //产品tag标签
@@ -149,7 +152,7 @@
     $("#title-header").html("在GAMES上购买"+gameData.name)
     //游戏封面照
     let gamePhotoHtml = "../"+gameData.gamePhoto;
-    console.log(gamePhotoHtml);
+    /*console.log(gamePhotoHtml);*/
     let gamePhoto = "<img src ='"+ gamePhotoHtml+"' alt = '"+gameData.name+"' id = 'game-header' />";
     $("#games-photo-header").html(gamePhoto);
 
@@ -159,7 +162,6 @@
     //发行日期
     $("#issuingDate-date").html(gameData.issuingDate);
 
-    // "<a href='name=123' id='game-publisher-link'>123</a>"
     //发行商
     let gamePublisherLink = "<a href='${pageContext.request.contextPath}/gamePublisher/findGamePublisherWithName?name="+gameData.publishersList[0].name+"'  id='game-publisher-link'>"+gameData.publishersList[0].name+"</a>";
     $("#game-publisher").html(gamePublisherLink);
@@ -173,6 +175,7 @@
     }
 
     gameDataNeed(gameData);
+
 </script>
 </body>
 </html>

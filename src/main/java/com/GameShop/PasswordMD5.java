@@ -8,6 +8,8 @@ import org.apache.shiro.util.ByteSource;
 
 import java.util.UUID;
 
+import static com.GameShop.utils.ShiroPasswordValidation.validatePassword;
+
 /**
  * @ClassName PasswordMD5
  * @Author KaoRouFan
@@ -22,9 +24,9 @@ public class PasswordMD5 {
         // 注册时生成加密密码
         /*String salt1 = new SecureRandomNumberGenerator().nextBytes().toHex(); */    // 生成随机盐
 
-       /* String salt1 = "5d6ca08d58a4c9081aeba30f75aa811b";*/
+        /*String salt1 = "5d588144fa9b150d04e5f8f08e7b448f";
 
-        /*String encryptedPwd = new SimpleHash(
+        String encryptedPwd = new SimpleHash(
                 "MD5",             // 算法
                 "7355608",       // 原始密码
                 ByteSource.Util.bytes(salt1),  // 盐
@@ -35,18 +37,16 @@ public class PasswordMD5 {
 
 
         // 验证原理
-        String dbPassword = "10e87f85091daca5e48572688c39dbb6 "; // 数据库存储的密码
+        String dbPassword = "e595ba0a97d62581d5bf372c7e8e1942"; // 数据库存储的密码
         String inputPassword = "7355608"; // 用户输入的密码
-        String salt = "17ea845ca6efef6e6539f013c7b53fd8";       // 数据库存储的盐值
+        String salt = "5d588144fa9b150d04e5f8f08e7b448f";       // 数据库存储的盐值
         int iterations = 1000;              // 与注册时相同的迭代次数
 
         //20cf29513cb115354d34fd6122071558
 
 // Shiro内部计算
-        String computedHash = new SimpleHash("MD5", inputPassword, salt, iterations).toHex();
-
-// 最终比较
-        boolean flag = dbPassword.equals(computedHash); // 返回true则验证通过
-        System.out.println(flag);
+        boolean isValid = validatePassword(inputPassword, dbPassword, salt);
+        // 返回true则验证通过
+        System.out.println(isValid);
     }
 }

@@ -33,10 +33,6 @@ public class FindUserNameAndPhotoController {
     public Map<String, Object>   home() {
         // 从 Shiro 的 Session 中获取用户信息
 
-        /*Subject currentUser  = SecurityUtils.getSubject();
-        Session session = currentUser.getSession();
-        session.setAttribute("user",user);*/
-
         Subject subject = SecurityUtils.getSubject();
         Session session = subject.getSession();
         User currentUser = (User) session.getAttribute("user");

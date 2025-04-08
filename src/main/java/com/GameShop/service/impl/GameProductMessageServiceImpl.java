@@ -25,4 +25,19 @@ public class GameProductMessageServiceImpl implements GameProductMessageService 
     public List<GameScreen> findGameScreenById(int id) {
         return gameProductMessageDao.findGameScreenById(id);
     }
+
+    @Override
+    public int findUWHGameByUidGid(int userId, int gameId) {
+        return gameProductMessageDao.findUWHGameByUidGid(userId, gameId);
+    }
+
+    @Override
+    public int findSCGameByUidGid(int userId,int gameId) {
+        return gameProductMessageDao.findSCGameByUidGid(userId, gameId);
+    }
+
+    @Override
+    public int insertSC(int userId, int gpId, double price) {
+        return gameProductMessageDao.insertSC(userId, gpId, price);
+    }
 }

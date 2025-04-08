@@ -1,7 +1,9 @@
 package com.GameShop.controller;
 
 import com.GameShop.entity.UserWareHouse;
+import com.GameShop.exception.CustomException;
 import com.GameShop.service.UserMessageService;
+import com.GameShop.utils.Result;
 import com.alibaba.fastjson.JSON;
 import org.apache.tomcat.jni.SSL;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,5 +45,12 @@ public class UserMessageController {
     @RequestMapping("/updateUser")
     public String linkUpdateUser(){
         return "UpdateUser";
+    }
+
+    @RequestMapping("/findUserBalanceById")
+    @ResponseBody
+    public Result findUserBalanceById(@RequestParam("userId")int id){
+
+        return Result.success(userMessageService.findUserBalanceById(id));
     }
 }

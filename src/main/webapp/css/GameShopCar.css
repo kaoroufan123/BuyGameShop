@@ -1,0 +1,137 @@
+#app {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#appbody {
+    flex: 1;
+    background-color: rgb(30, 45, 61);
+    background-size: cover;
+    background-position: center;
+}
+
+#search-games-div {
+    display: flex;
+    gap: 0;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+
+#search-games {
+    width: 300px;
+    background-color: rgb(49, 98, 130);
+    color: white;
+    border: 0;
+}
+
+#search-games:hover {
+    border: 1px solid white;
+}
+
+#your_shop_car_text {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+
+/* 左侧动态购物车 */
+#cs_game_list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cs_game_bg {
+    background-color: rgb(26, 38, 51);
+}
+
+.cs_game {
+    padding: 20px;
+    display: flex;
+}
+
+.cs_game_meg_right {
+    flex: 1;
+    padding-left: 10px;
+
+}
+
+.game_image {
+    width: 200px;
+}
+
+#notGame_inCar{
+    color: white;
+    font-size: 20px;
+}
+
+.cs_game_meg_top {
+    color: white;
+    font-size: 20px;
+}
+
+.cs_game_meg_bottom {
+    display: flex;
+    flex-direction: column;  /* 垂直排列 */
+    align-items: flex-end;   /* 子元素右对齐 */
+    gap: 5px;                /* 上下间距 */
+    margin-top: 30px;        /* 保持在容器底部 */
+}
+
+.csgmb_remove_link{
+    color: rgb(89,104,119);
+    text-decoration: underline;
+}
+
+.csgmb_remove_link:hover{
+    color: white;
+}
+
+.csgmb_price{
+    color: white;
+}
+
+/* 右侧支付 */
+#pay_right {
+    background-color: rgb(26, 38, 51);
+}
+
+#pay_right {
+    padding: 10px;
+}
+
+#pay_price_div {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+#pay_price {
+    font-weight: bolder;
+}
+
+#pay_btn_div {
+    margin-top: 10px;
+    display: flex;
+}
+
+#pay_btn {
+    flex: 1;
+    /* 关键属性：自动填充剩余空间 */
+    min-width: 0;
+    /* 允许收缩到小于内容宽度 */
+    white-space: nowrap;
+    /* 禁止文字换行 */
+    overflow: hidden;
+    /* 隐藏溢出内容 */
+    text-overflow: ellipsis;
+    /* 文字溢出显示省略号 */
+}
