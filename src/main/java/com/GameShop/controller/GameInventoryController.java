@@ -42,7 +42,6 @@ public class GameInventoryController {
     @ResponseBody
     public String findGameInventoryByUserId(@RequestParam("userId") int userId) {
         List<UserWareHouse> userWareHouseList = gameInventoryService.findGameInventoryByUserId(userId);
-        /*System.out.println(userWareHouseList);*/
 
         return JSON.toJSONString(userWareHouseList);
     }

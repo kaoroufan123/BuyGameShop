@@ -39,7 +39,7 @@ public class UpdateUserImgController {
         Map<String, Object> result = new HashMap<>();
         try {
             String photoPath = ImageUtil.upload(request, file);
-            System.out.println(photoPath);
+            /*System.out.println(photoPath);*/
             // 更新数据库
             updateUserImgService.updateUserPhoto(id, photoPath);
             result.put("success", true);

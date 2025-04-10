@@ -40,7 +40,7 @@ public class ImageUtil {
             String workDirectory = System.getProperty("user.dir");
             String localDirString = workDirectory+"/src/main/webapp/static/upload";
 
-            System.out.println(Thread.currentThread().getContextClassLoader().getResource("").getPath());
+            /*System.out.println(Thread.currentThread().getContextClassLoader().getResource("").getPath());*/
             //创建本地件
             File localDirPath = new File(localDirString);
             // 检验文件夹是否存在

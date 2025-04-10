@@ -27,7 +27,7 @@ public class RegisterUserController {
     @ResponseBody
     public String checkUserEmail(@RequestParam(value = "email") String email) {
         int index = registerUserService.checkUserEmail(email);
-        System.out.println(index);
+        /*System.out.println(index);*/
         if(index == 1){
             return "success";
         }else{
